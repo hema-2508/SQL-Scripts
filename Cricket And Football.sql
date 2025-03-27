@@ -131,3 +131,40 @@ SELECT * FROM Football_info WHERE team_name LIKE 'GOA%';
 
 SELECT * FROM Football_info WHERE team_name NOT LIKE 'RAJ%';
 
+SELECT * FROM Cricket_info;
+
+SELECT instr(captian,'D') FROM Cricket_info;
+
+SELECT SUBSTR(team_name,1,12) FROM Cricket_info;
+
+SELECT LENGTH(captian) FROM Cricket_info;
+
+SELECT LTRIM(captian) FROM Cricket_info;
+
+SELECT LOWER(rep_state) FROM cricket_info;
+
+SELECT UPPER(rep_state) FROM cricket_info;
+
+SELECT CONCAT(team_name, captian, no_of_players, rep_state, runs, wickets, ttl_matches, wins, losses, high_scr, lowest_score, ranks) FROM Cricket_info;
+
+SELECT COUNT(*) as No_of_teams FROM Cricket_info;
+
+SELECT sum(no_of_players) AS total_players FROM Cricket_info;
+
+SELECT MAX(highest_score) as high_score from Cricket_info;
+
+SELECT MIN(runs) as min_runs from Cricket_info;
+
+select AVG(runs) as avg_runs from Cricket_info;
+
+SELECT COUNT(*),rep_state FROM Cricket_info GROUP BY rep_state;
+
+SELECT MAX(RUNS) AS max_runs ,rep_state FROM Cricket_info GROUP BY rep_state;
+
+SELECT MIN(wickets) AS min_wickets , captian FROM Cricket_info GROUP BY captian;
+
+SELECT AVG(ttl_matches) AS avg_matches, team_name FROM Cricket_info GROUP BY team_name;
+
+SELECT MAX(RUNS) AS max_runs ,rep_state FROM Cricket_info GROUP BY rep_state HAVING max_runs > 4500;
+
+SELECT DISTINCT(wins) FROM Cricket_info;
