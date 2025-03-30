@@ -168,3 +168,6 @@ SELECT AVG(ttl_matches) AS avg_matches, team_name FROM Cricket_info GROUP BY tea
 SELECT MAX(RUNS) AS max_runs ,rep_state FROM Cricket_info GROUP BY rep_state HAVING max_runs > 4500;
 
 SELECT DISTINCT(wins) FROM Cricket_info;
+
+
+
